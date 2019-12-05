@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="648.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="381.0" layoutY="22.0" text="Perfil Cliente">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="63.0" layoutY="572.0" mnemonicParsing="false" onAction="#endereco" text="Cancelar" />
+      <TabPane layoutX="157.0" layoutY="66.0" prefHeight="470.0" prefWidth="740.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Cliente">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="30.0" layoutY="39.0" text="Nome" />
+                        <Label layoutX="30.0" layoutY="93.0" text="Cpf" />
+                        <Label layoutX="30.0" layoutY="172.0" text="Estado Civil" />
+                        <Label layoutX="30.0" layoutY="241.0" text="Profissão" />
+                        <Label layoutX="16.0" layoutY="327.0" text="Escolaridade" />
+                        <TextField fx:id="txtNome" layoutX="93.0" layoutY="35.0" prefHeight="17.0" prefWidth="150.0" />
+                        <TextField fx:id="txtCpf" layoutX="93.0" layoutY="89.0" onKeyReleased="#tfCpf" />
+                        <TextField fx:id="txtEstadoCivil" layoutX="93.0" layoutY="168.0" />
+                        <TextField fx:id="txtProfissao" layoutX="93.0" layoutY="237.0" />
+                        <TextField fx:id="txtEscolaridade" layoutX="94.0" layoutY="323.0" />
+                        <Label layoutX="434.0" layoutY="31.0" text="Data Nascimento" />
+                        <Label layoutX="442.0" layoutY="72.0" text="Genero" />
+                        <RadioButton fx:id="rbMasc" layoutX="520.0" layoutY="72.0" mnemonicParsing="false" text="Masculino">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="rbGenero" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbFem" layoutX="606.0" layoutY="72.0" mnemonicParsing="false" text="Feminino" toggleGroup="$rbGenero" />
+                        <DatePicker fx:id="dtDataNasc" layoutX="535.0" layoutY="27.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Processo">
+               <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="416.0" prefWidth="489.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="32.0" text="Processo" />
+                        <Label layoutX="15.0" layoutY="84.0" text="Situação" />
+                        <Label layoutX="6.0" layoutY="139.0" text="Observação" />
+                        <Label layoutX="9.0" layoutY="325.0" text="Data Verificação" />
+                        <TextField fx:id="txtProcesso" layoutX="81.0" layoutY="28.0" />
+                        <TextArea fx:id="txaObs" layoutX="87.0" layoutY="141.0" prefHeight="159.0" prefWidth="344.0" />
+                        <ComboBox fx:id="cbSituacao" layoutX="81.0" layoutY="80.0" prefWidth="150.0" />
+                        <DatePicker fx:id="dtDataVerificacao" layoutX="115.0" layoutY="321.0" />
+                     </children></AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Endereco">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="31.0" layoutY="29.0" text="Rua" />
+                        <Label layoutX="31.0" layoutY="74.0" text="Numero" />
+                        <Label layoutX="31.0" layoutY="134.0" text="Bairro" />
+                        <Label layoutX="31.0" layoutY="195.0" text="Cidade" />
+                        <TextField fx:id="txtRua" layoutX="96.0" layoutY="25.0" />
+                        <TextField fx:id="txtLogradouro" layoutX="96.0" layoutY="70.0" onKeyPressed="#tfLogradouro" />
+                        <TextField fx:id="txtBairro" layoutX="96.0" layoutY="130.0" />
+                        <TextField fx:id="txtCidade" layoutX="96.0" layoutY="183.0" />
+                        <TextField fx:id="txtEstado" layoutX="96.0" layoutY="256.0" />
+                        <TextField fx:id="txtCep" layoutX="96.0" layoutY="321.0" onKeyPressed="#tfCep" />
+                        <Label layoutX="31.0" layoutY="260.0" text="Estado" />
+                        <Label layoutX="31.0" layoutY="325.0" text="Cep" />
+                        <Label layoutX="398.0" layoutY="21.0" text="Telefone" />
+                        <TextField fx:id="txtTelefone" layoutX="466.0" layoutY="17.0" onKeyPressed="#tfTelefone" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="lblCliente" layoutX="56.0" layoutY="49.0" text="Nome Cliente:" />
+      <Button fx:id="btnEditar" layoutX="469.0" layoutY="572.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnConcluir" layoutX="777.0" layoutY="572.0" mnemonicParsing="false" onAction="#concluir" text="Concluir" />
+   </children>
+</AnchorPane>

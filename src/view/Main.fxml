@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="960.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="-7.0" prefHeight="700.0" prefWidth="179.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#principal" prefHeight="116.0" prefWidth="200.0" text="Principal" />
+            <Button fx:id="btnCliente" mnemonicParsing="false" onAction="#cliente" prefHeight="120.0" prefWidth="179.0" text="Cliente" />
+            <Button fx:id="btnFuncionario" mnemonicParsing="false" onAction="#funcionario" prefHeight="120.0" prefWidth="179.0" text="Funcionario" />
+            <Button mnemonicParsing="false" onAction="#sairConta" prefHeight="120.0" prefWidth="179.0" text="Sair da Conta" />
+            <Button mnemonicParsing="false" onAction="#sair" prefHeight="120.0" prefWidth="179.0" text="Sair" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="acConteudo" layoutX="171.0" layoutY="14.0" prefHeight="660.0" prefWidth="771.0">
+         <children>
+            <Label layoutX="347.0" layoutY="41.0" text="Medeiros Advogadas ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNome" layoutX="355.0" layoutY="80.0" prefHeight="27.0" prefWidth="158.0" />
+            <Label fx:id="lblNome" layoutX="614.0" layoutY="600.0" prefHeight="37.0" prefWidth="122.0" text="Label" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

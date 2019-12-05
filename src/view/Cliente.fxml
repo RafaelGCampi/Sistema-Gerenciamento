@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="acEntra" prefHeight="660.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <TableView fx:id="tbClientes" layoutX="34.0" layoutY="94.0" onMouseClicked="#clicarTabela" prefHeight="418.0" prefWidth="702.0">
+        <columns>
+          <TableColumn fx:id="clmNome" prefWidth="132.0" text="Nome" />
+          <TableColumn fx:id="clmCpf" prefWidth="103.0" text="Cpf" />
+            <TableColumn fx:id="clmProcesso" prefWidth="75.0" text="Processo" />
+            <TableColumn fx:id="clmObs" prefWidth="129.0" text="Observação" />
+            <TableColumn fx:id="clmDataVeri" prefWidth="137.0" text="Data Verificação" />
+            <TableColumn fx:id="clmSituacao" prefWidth="121.0" text="Situação" />
+        </columns>
+      </TableView>
+      <Label layoutX="51.0" layoutY="49.0" prefHeight="17.0" prefWidth="67.0" text="Digite o cpf:" />
+      <TextField fx:id="txtPesquisa" layoutX="139.0" layoutY="45.0" onKeyReleased="#tfPesquisar" />
+      <HBox alignment="BOTTOM_CENTER" layoutX="22.0" layoutY="578.0" prefHeight="68.0" prefWidth="857.0">
+         <children>
+            <Button mnemonicParsing="false" text="Cancelar">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#cadastrar" text="Cadastrar" />
+            <Button fx:id="btnPerfil" mnemonicParsing="false" onAction="#perfilCliente" text="Ver Perfil" />
+            <Button mnemonicParsing="false" onAction="#atualizaTabela" text="Atualiza" />
+            <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <Button fx:id="btnBusca" layoutX="327.0" layoutY="45.0" mnemonicParsing="false" onAction="#pesquisa" text="Buscar" />
+      <Label layoutX="369.0" layoutY="1.0" text="Clientes">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

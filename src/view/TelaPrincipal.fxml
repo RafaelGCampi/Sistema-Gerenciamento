@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="661.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="287.0" layoutY="44.0" text="Medeiros Advogadas">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="341.0" layoutY="109.0" text="Bem-Vindo" />
+      <Label fx:id="lblNome" layoutX="307.0" layoutY="82.0" prefHeight="27.0" prefWidth="168.0" />
+      
+   </children>
+</AnchorPane>
